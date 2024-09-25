@@ -210,37 +210,73 @@
              <a href="#"><i class="fa-brands fa-instagram"></i></a>
           </div>
           <div class="row">
-             <div class="col-lg-7">
-                <div class="tp-contact-breadcrumb-content">
+            <div class="col-lg-7">
+               <div class="tp-contact-breadcrumb-content">
                    <h3 class="tp-contact-breadcrumb-title">Get in touch</h3>
-                   <p>We are here for you! how can we help, We are here for you! </p>
-                   <form id="contact-form" action="assets/mail.php" method="POST">
-                      <div class="row">
-                         <div class="col-md-12">
-                            <div class="tp-contact-input">
-                               <input name="name" type="text" placeholder="Your Name">
-                            </div>
-                         </div>
-                         <div class="col-md-12">
-                            <div class="tp-contact-input">
-                               <input name="email" type="email" placeholder="Email Here">
-                            </div>
-                         </div>
-                         <div class="col-md-12">
-                            <div class="tp-contact-input">
-                               <textarea name="message" placeholder="Message Here"></textarea>
-                            </div>
-                         </div>
-                         <div class="col-md-12">
-                            <div class="tp-contact-breadcrumb-btn">
-                               <button type="submit" class="tp-btn">SUBMIT</button>
-                               <p class="ajax-response"></p>
-                            </div>
-                         </div>
-                      </div>
+                   <p>We are here for you! how can we help, We are here for you!</p>
+                   
+                   <form id="messageValidation" action="assets/mail.php" method="POST">
+                       <div class="row" id="notSuccess" style="margin-bottom: 0px;">
+                           <div class="col-md-12">
+                               <div class="tp-contact-input" style="margin-bottom: 20px;">
+                                   <input name="userName" id="userName" type="text" placeholder="Your Name Here *" >
+                               </div>
+                           </div>
+                           <div class="col-md-12">
+                               <div class="tp-contact-input" style="margin-bottom: 20px;">
+                                   <input name="userNumber" id="userNumber" type="number" placeholder="Your Number Here *">
+                               </div>
+                           </div>
+                           <div class="col-md-12">
+                               <div class="tp-contact-input" style="margin-bottom: 20px;">
+                                   <textarea name="userMessage" id="userMessage" placeholder="Your Message Here *"></textarea>
+                               </div>
+                           </div>
+                           <div class="col-md-12">
+                               <div class="tp-contact-breadcrumb-btn">
+                                   <button type="submit" value="submit" class="tp-btn">SUBMIT</button>
+                                   <p class="ajax-response"></p>
+                               </div>
+                           </div>
+                       </div>
                    </form>
-                </div>
-             </div>
+           
+                   <!-- Success field -->
+                   <div id="success" style="display: none">
+                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                           <span style="padding: 10px">
+                               <i class="fa-solid fa-circle-check" style="font-size: 150px; color: #FFD700 ;"></i>
+                           </span>
+                           <p style="color: rgb(0, 0, 0); padding: 5px; font-size: 2.5rem">
+                               Message sent successfully
+                           </p>
+                       </div>
+                       <div>
+                           <p style="color: black; display: flex; align-items: center; justify-content: center; font-size: medium;">
+                               The Management will contact you shortly
+                           </p>
+                       </div>
+                   </div>
+           
+                   <!-- Failure/Error field (notSuccess) -->
+                   <div id="notSuccess" style="display: none">
+                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                           <span style="padding: 10px">
+                               <i class="fa-solid fa-circle-xmark" style="font-size: 100px; color: red;"></i>
+                           </span>
+                           <p style="color: red; padding: 5px; font-size: 1.5rem">
+                               There was an error sending your message
+                           </p>
+                       </div>
+                       <div>
+                           <p style="color: red; display: flex; align-items: center; justify-content: center; font-size: smaller;">
+                               Please try again later
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           
              <div class="col-lg-5">
                 <div class="tp-contact-breadcrumb-wrapper">
 
@@ -320,6 +356,8 @@
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/main.js"></script>
    <script src="js/utils.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+   <script src="js/messageValidation.js"></script>
 
 </body>
 

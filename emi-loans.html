@@ -416,31 +416,105 @@
       <section class="tp-cta-area p-relative">
          <div class="tp-cta-bg-2"></div>
          <div class="container">
-            <div class="tp-cta-bg-wrapper p-relative" data-background="assets/img/cta/bg-shape.png">
-               <div class="row">
-                  <h3 class="tp-cta-title">Ask What in your Mind...!</h3>
-                  <div class="col-lg-3 mt-1">
-                     <div>
-                        <input style="border: none;border-radius: 10px;font-size: 16px;height: 73px;" type="text"
-                           placeholder="Enter Your Name">
-                     </div>
-                  </div>
-                  <div class="col-lg-3 mt-1">
-                     <div>
-                        <input style="border: none;border-radius: 10px;font-size: 16px;height: 73px;" type="number"
-                          maxlength="10" minlength="10" placeholder="Enter Mobile Number">
-                     </div>
-                  </div>
-                  <div class="col-lg-6 mt-1">
-                     <div class="tp-cta-email p-relative">
-                        <input type="text" placeholder="Enter Message">
-                        <button> <span><i class="fa-solid fa-envelope"></i> Send</span></button>
-                     </div>
-                  </div>
+           <!-- Empty input field -->
+           <div
+             id="messageForm"
+             class="tp-cta-bg-wrapper p-relative"
+             data-background="assets/img/cta/bg-shape.png"
+           >
+             <!-- Empty field -->
+             <form action="" name="messageValidation" id="messageValidation" target="">
+               <div class="row" id="notSuccess">
+                 <h3 class="tp-cta-title">Ask What in your Mind...!</h3>
+                 <div class="col-lg-3 mt-1">
+                   <div>
+                     <input
+                       id="userName"
+                       name="userName"
+                       style="
+                         border: none;
+                         border-radius: 10px;
+                         font-size: 16px;
+                         height: 73px;
+                       "
+                       type="text"
+                       placeholder="Enter Your Name *"
+                     />
+                   </div>
+                 </div>
+                 <div class="col-lg-3 mt-1">
+                   <div>
+                     <input
+                       id="userNumber"
+                       name="userNumber"
+                       style="
+                         border: none;
+                         border-radius: 10px;
+                         font-size: 16px;
+                         height: 73px;
+                       "
+                       type="number"
+                       placeholder="Enter Mobile Number *"
+                       
+                     />
+                   </div>
+                 </div>
+                 <div class="col-lg-6 mt-1">
+                   <div class="tp-cta-email p-relative">
+                     <input
+                       type="text"
+                       id="userMessage"
+                       name="userMessage"
+                       placeholder="Enter Message *"
+                     />
+                     <button type="submit" value="submit">
+                       <span><i class="fa-solid fa-envelope"></i> Send</span>
+                     </button>
+                   </div>
+                 </div>
                </div>
-            </div>
+             </form>
+ 
+             <!-- Success field -->
+             <div id="success" style="display: none">
+               <div
+                 style="
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+                 "
+               >
+                 <span style="padding: 10px"
+                   ><i
+                     class="fa-solid fa-circle-check"
+                     style="
+                       font-size: 100px;
+                       color: aliceblue;
+                     "
+                   ></i
+                 ></span>
+                 <p style="color: aliceblue; padding: 5px; font-size: 1.5rem">
+                   Message sent successfully
+                 </p>
+               </div>
+               <div>
+                 <p
+                   style="
+                     color: black;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     font-size: smaller;
+                   "
+                 >
+                   The Management will contact you shortly
+                 </p>
+               </div>
+             </div>
+           </div>
          </div>
-      </section>
+       </section>
 
       <section class="tp-service-breadcrumb-area pt-120 pb-40">
         <div class="container">
@@ -996,6 +1070,8 @@
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/main.js"></script>
    <script src="js/utils.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+   <script src="js/messageValidation.js"></script>
 
 </body>
 

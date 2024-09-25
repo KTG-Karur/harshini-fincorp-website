@@ -5668,6 +5668,7 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /*  4.1 Main menu css
 /*----------------------------------------*/
+
 .tp-main-menu {
   position: relative;
 }
@@ -5702,6 +5703,7 @@ body .ui-tooltip {
 .tp-main-menu ul li.has-dropdown > a {
   position: relative;
 }
+
 .tp-main-menu ul li.has-dropdown > a::after {
   content: "\f107";
   font-size: 12px;
@@ -6209,14 +6211,14 @@ body .ui-tooltip {
   border: 1px solid rgba(2, 11, 24, 0.12);
   transform: translateY(-15px);
 }
-.tp-main-menu-mobile ul li.has-dropdown > a .dropdown-toggle-btn i {
+.tp-main-menu-mobile ul li. > a .dropdown-toggle-btn i {
   -webkit-transition: all 0.3s 0s ease-out;
   -moz-transition: all 0.3s 0s ease-out;
   -ms-transition: all 0.3s 0s ease-out;
   -o-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
 }
-.tp-main-menu-mobile ul li.has-dropdown > a .dropdown-toggle-btn.dropdown-opened i {
+.tp-main-menu-mobile ul li. > a .dropdown-toggle-btn.dropdown-opened i {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
